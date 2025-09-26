@@ -1,67 +1,37 @@
-const translations = {
-  es: {
-    "nav-home": "Inicio",
-    "nav-portfolio": "Portfolio",
-    "nav-contact": "Contacto",
-    "portfolio-title": "Portfolio",
-    "portfolio-subtitle": "Aquí están mis juegos y proyectos destacados:",
-    "portfolio-games": "🎮 Juegos",
-    "portfolio-games-text-title": "Próximamente...",
-    "portfolio-games-text": "Actualmente no tengo ningún juego publicado, próximamente añadiré mis creaciones aquí.",
-    "portfolio-projects": "💡 Proyectos",
-    "casino-nightmare": "The Casino Nightmare",
-    "home-title": "Bienvenido a Casino Nightmare",
-    "home-desc": "Explora mi portfolio de desarrollo web y videojuegos.<br>Descubre mis proyectos y contacta para colaboraciones.",
-    "contact-title": "Contacta Conmigo",
-    "contact-desc": "¿Quieres colaborar o tienes alguna consulta?<br>Escríbeme al correo: <strong>swelen47@gmail.com</strong>",
-    "contact-send": "Enviar",
-    "contact-name": "Tu nombre",
-    "contact-email": "Tu email",
-    "contact-message": "Tu mensaje"
-  },
-  en: {
-    "nav-home": "Home",
-    "nav-portfolio": "Portfolio",
-    "nav-contact": "Contact",
-    "portfolio-title": "Portfolio",
-    "portfolio-subtitle": "Here are my featured games and projects:",
-    "portfolio-games": "🎮 Games",
-    "portfolio-games-text-title": "Coming soon...",
-    "portfolio-games-text": "I don't have any games published yet, but I'll be adding them soon.",
-    "portfolio-projects": "💡 Projects",
-    "casino-nightmare": "The Casino Nightmare",
-    "home-title": "Welcome to Casino Nightmare",
-    "home-desc": "Explore my web and videogame development portfolio.<br>Discover my projects and contact for collaborations.",
-    "contact-title": "Contact Me",
-    "contact-desc": "Want to collaborate or have a question?<br>Write me at: <strong>swelen47@gmail.com</strong>",
-    "contact-send": "Send",
-    "contact-name": "Your name",
-    "contact-email": "Your email",
-    "contact-message": "Your message"
-  }
-};
-
-function setLanguage(lang) {
-  document.querySelectorAll('[data-key]').forEach(el => {
-    const key = el.getAttribute('data-key');
-    if (translations[lang][key]) {
-      if (el.tagName === "INPUT" || el.tagName === "TEXTAREA") {
-        el.placeholder = translations[lang][key];
-      } else if (el.tagName === "BUTTON") {
-        el.textContent = translations[lang][key];
-      } else {
-        el.innerHTML = translations[lang][key];
-      }
-    }
-  });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  const langSwitcher = document.getElementById('lang-switcher');
-  if (langSwitcher) {
-    setLanguage(langSwitcher.value);
-    langSwitcher.addEventListener('change', (e) => {
-      setLanguage(e.target.value);
-    });
-  }
-});
+es: {
+  "nav-home": "Inicio",
+  "nav-portfolio": "Portfolio ▾",
+  "nav-games": "🎮 Juegos",
+  "nav-projects": "💡 Proyectos",
+  "nav-contact": "Contacto",
+  "nav-donate": "Donar",
+  "nav-about": "Sobre mí",
+  "home-title": "Bienvenido a mi web",
+  "home-desc": "Explora mis proyectos y juegos. Aquí podrás conocer mi trabajo y contactarme si quieres colaborar.",
+  "games-title": "🎮 Juegos",
+  "games-text": "Actualmente no hay juegos publicados, ¡pero pronto añadiré mis creaciones!",
+  "projects-title": "💡 Proyectos",
+  "contact-title": "Contacto",
+  "contact-desc": "Para cualquier consulta o colaboración, puedes escribirme al correo: swelen47@gmail.com",
+  "donate-title": "Apoya mi trabajo",
+  "donate-desc": "¡Gracias por visitar mi portfolio! 🙌 Todo mi contenido lo hago con dedicación y pasión. Si quieres apoyarme, cualquier donación será muy apreciada.",
+  "donate-button": "☕ Invítame a un café en Ko-fi",
+  "about-title": "Sobre Sw3l3n",
+  "about-desc": "¡Hola! Soy <b>Sw3l3n</b>, apasionado del desarrollo web y creación de videojuegos. Desde pequeño me ha fascinado la tecnología y la creatividad digital, así que decidí combinar ambas para crear proyectos únicos y divertidos.",
+  "about-desc2": "Gracias por visitar mi portfolio, espero que disfrutes explorando mi trabajo. ¡No dudes en contactarme si quieres colaborar o simplemente decir hola!"
+},
+en: {
+  "nav-home": "Home",
+  "nav-portfolio": "Portfolio ▾",
+  "nav-games": "🎮 Games",
+  "nav-projects": "💡 Projects",
+  "nav-contact": "Contact",
+  "nav-donate": "Donate",
+  "nav-about": "About Me",
+  "home-title": "Welcome to my website",
+  "home-desc": "Explore my projects and games. Here you can see my work and contact me if you want to collaborate.",
+  "games-title": "🎮 Games",
+  "games-text": "I don't have any games published yet, but I will add them soon!",
+  "projects-title": "💡 Projects",
+  "contact-title": "Contact",
+  "contact-desc": "For any question or collaboration, you can email me at: swelen47@gmail.com
