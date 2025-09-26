@@ -4,33 +4,129 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
-  <title data-key="contact-title">Contacto - Mi Portfolio</title>
+  <title data-key="contact-title">Contacto - Casino Nightmare</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Barlow', Arial, sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      color: #222;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 16px 32px;
+      border-bottom: 2px solid #2471A3;
+    }
+    .nav-left a, .nav-right label {
+      color: #2471A3;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 24px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .nav-left a:last-child { margin-right: 0; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      margin-right: 40px;
+    }
+    .nav-right label { margin-right: 8px; }
+    #lang-switcher { margin-right: 12px; }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 60px 16px 40px 16px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2471A3;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: 2px;
+    }
+    p {
+      font-size: 1.2rem;
+      color: #222;
+      margin-bottom: 32px;
+      margin-top: 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      max-width: 400px;
+      margin: 0 auto;
+    }
+    input, textarea {
+      font-family: 'Barlow', Arial, sans-serif;
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #2471A3;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #fff;
+      color: #222;
+    }
+    button {
+      background: #2471A3;
+      color: #fff;
+      font-family: 'Barlow', Arial, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      padding: 10px 24px;
+      cursor: pointer;
+      margin-top: 8px;
+      transition: background 0.2s;
+    }
+    button:hover {
+      background: #145a8a;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 24px 4px; }
+      h1 { font-size: 2rem; }
+      .nav-right { margin-right: 10px; }
+      form { max-width: 100%; }
+    }
+  </style>
 </head>
 <body>
-
   <nav>
     <div class="nav-left">
       <a href="index.html" data-key="nav-home">Inicio</a>
       <a href="portfolio.html" data-key="nav-portfolio">Portfolio</a>
       <a href="contacto.html" data-key="nav-contact">Contacto</a>
     </div>
-
     <div class="nav-right">
-      <label for="lang-switcher" style="margin-right:8px;">🌍</label>
+      <label for="lang-switcher">🌍</label>
       <select id="lang-switcher">
         <option value="es">🇪🇸 Español</option>
         <option value="en">🇬🇧 English</option>
       </select>
     </div>
   </nav>
-
-  <div class="container" style="display:flex; flex-direction:column; justify-content:center; align-items:center; min-height:60vh; text-align:center;">
-    <h1 data-key="contact-title" style="color:#009124; font-family:'Orbitron',Arial,sans-serif; font-size:2rem; margin-bottom:16px;">Contáctame</h1>
-    <p data-key="contact-text" style="color:#000000; font-size:1.1rem;">Puedes contactar conmigo para cualquier cosa en el correo:</p>
-    <p style="color:#7c7979; font-size:1.2rem; font-family:'Orbitron',Arial,sans-serif; margin-top:12px;"> <strong>swelen47@gmail.com</strong></p>
+  <div class="container">
+    <h1 data-key="contact-title">Contacto</h1>
+    <p data-key="contact-desc">
+      ¿Quieres colaborar o tienes alguna consulta?<br>
+      Rellena el formulario y te responderé lo antes posible.
+    </p>
+    <form>
+      <input type="text" name="nombre" placeholder="Tu nombre" required>
+      <input type="email" name="email" placeholder="Tu email" required>
+      <textarea name="mensaje" rows="5" placeholder="Tu mensaje" required></textarea>
+      <button type="submit" data-key="contact-send">Enviar</button>
+    </form>
   </div>
-
   <script src="lang.js"></script>
   <script src="script.js"></script>
 </body>

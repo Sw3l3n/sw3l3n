@@ -6,6 +6,122 @@
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&display=swap" rel="stylesheet">
   <title data-key="portfolio-title">Portfolio - Mis Trabajos</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: 'Barlow', Arial, sans-serif;
+      background: #f8fafc;
+      margin: 0;
+      color: #222;
+      text-align: center;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #fff;
+      padding: 16px 32px;
+      border-bottom: 2px solid #2471A3;
+      font-family: 'Barlow', Arial, sans-serif;
+    }
+    .nav-left a, .nav-right label {
+      color: #2471A3;
+      text-decoration: none;
+      font-weight: 700;
+      margin-right: 24px;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+    }
+    .nav-left a:last-child { margin-right: 0; }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      margin-right: 40px; /* Mueve el selector de idioma un poco a la izquierda */
+    }
+    .nav-right label {
+      margin-right: 8px;
+    }
+    #lang-switcher {
+      margin-right: 12px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 16px;
+      text-align: center;
+    }
+    h1 {
+      font-size: 2.5rem;
+      color: #2471A3;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 2px;
+    }
+    h2 {
+      font-size: 2rem;
+      color: #2471A3;
+      font-weight: 700;
+      margin-top: 48px;
+      margin-bottom: 24px;
+      letter-spacing: 2px;
+    }
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+    .card {
+      background: #eaf3fb;
+      border-radius: 16px;
+      box-shadow: 0 2px 12px #2471A355;
+      padding: 40px 32px;
+      max-width: 350px;
+      min-width: 260px;
+      border: 2px solid #2471A3;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .card h3 {
+      color: #2471A3;
+      font-size: 1.7rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      text-align: center;
+      letter-spacing: 1px;
+    }
+    .card img {
+      width: 100%;
+      max-width: 320px;
+      border-radius: 8px;
+      margin-bottom: 0;
+      box-shadow: 0 0 12px #2471A355;
+      background: #fff;
+      border: 1px solid #2471A3;
+      object-fit: cover;
+      display: block;
+    }
+    .card p {
+      color: #222;
+      text-align: center;
+      font-size: 1.1rem;
+      margin-top: 0;
+    }
+    /* Solo mostrar nombre e imagen en proyectos */
+    #projects .card p {
+      display: none;
+    }
+    @media (max-width: 600px) {
+      .container { padding: 16px 4px; }
+      .cards { gap: 16px; }
+      .card { padding: 24px 8px; }
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.3rem; }
+      .nav-right { margin-right: 10px; }
+    }
+  </style>
 </head>
 <body>
 
@@ -15,9 +131,8 @@
       <a href="portfolio.html" data-key="nav-portfolio">Portfolio</a>
       <a href="contacto.html" data-key="nav-contact">Contacto</a>
     </div>
-
     <div class="nav-right">
-      <label for="lang-switcher" style="margin-right:8px;">🌍</label>
+      <label for="lang-switcher">🌍</label>
       <select id="lang-switcher">
         <option value="es">🇪🇸 Español</option>
         <option value="en">🇬🇧 English</option>
@@ -27,21 +142,21 @@
 
   <div class="container">
     <h1 data-key="portfolio-title">Portfolio</h1>
-    <p data-key="portfolio-subtitle">Aquí están mis juegos y proyectos destacados:</p>
+    <p data-key="portfolio-subtitle" style="font-size:1.2rem; color:#222; margin-bottom:32px;">Aquí están mis juegos y proyectos destacados:</p>
 
-    <h2 data-key="portfolio-games" style="text-align:center; color:#2471A3; font-family:'Barlow',Arial,sans-serif; font-size:2rem; margin-top:40px; letter-spacing:2px;">🎮 Juegos</h2>
-    <div class="cards" style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap; margin-bottom:40px;">
-      <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f4f8fb; border-radius:16px; box-shadow:0 2px 12px #2471A355; padding:40px 32px; max-width:350px; min-width:260px; border:2px solid #2471A3;">
-        <h3 style="color:#2471A3; font-family:'Barlow',Arial,sans-serif; font-size:1.4rem; margin-bottom:16px; text-align:center; font-weight:700;">Próximamente...</h3>
-        <p data-key="portfolio-games-text" style="color:#222; text-align:center; font-size:1.1rem;">Actualmente no tengo ningún juego publicado, próximamente añadiré mis creaciones aquí.</p>
+    <h2 data-key="portfolio-games">🎮 Juegos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 style="font-size:1.4rem;">Próximamente...</h3>
+        <p data-key="portfolio-games-text">Actualmente no tengo ningún juego publicado, próximamente añadiré mis creaciones aquí.</p>
       </div>
     </div>
 
-    <h2 data-key="portfolio-projects" style="text-align:center; color:#1B2631; font-family:'Barlow',Arial,sans-serif; font-size:2rem; margin-top:40px; letter-spacing:2px;">💡 Proyectos</h2>
-    <div class="cards" style="display:flex; justify-content:center; gap:32px; flex-wrap:wrap;">
-      <div class="card" style="display:flex; flex-direction:column; align-items:center; justify-content:center; background:#f4f8fb; border-radius:16px; box-shadow:0 2px 12px #2471A355; padding:40px 32px; max-width:350px; min-width:260px; border:2px solid #2471A3;">
-        <h3 data-key="casino-nightmare" style="color:#2471A3; font-family:'Barlow',Arial,sans-serif; font-size:1.7rem; margin-bottom:16px; text-align:center; font-weight:700;">CASINO NIGHTMARE</h3>
-        <img src="casino-nightmare.png" alt="Casino Nightmare" style="width:100%; max-width:320px; border-radius:8px; margin-bottom:0; box-shadow:0 0 12px #2471A355;">
+    <h2 data-key="portfolio-projects">💡 Proyectos</h2>
+    <div class="cards" id="projects">
+      <div class="card">
+        <h3 data-key="casino-nightmare">CASINO NIGHTMARE</h3>
+        <img src="casino-nightmare.png" alt="Casino Nightmare">
       </div>
     </div>
   </div>
