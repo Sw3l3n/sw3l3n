@@ -1,0 +1,40 @@
+nav {
+  position: fixed;        /* Fija la barra en la parte superior */
+  top: 0;
+  left: 0;
+  width: 100%;           /* Ocupa todo el ancho */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #222;
+  padding: 10px 20px;
+  z-index: 1000;         /* Siempre encima del contenido */
+}
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav .nav-left a:last-child {
+  margin-right: 0;
+}
+
+#lang-switcher {
+  padding: 6px;
+  border-radius: 6px;
+  border: none;
+  font-size: 14px;
+  background: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+/* Para que el contenido no quede tapado por la barra */
+body {
+  margin: 0;
+  padding-top: 60px; /* altura de la barra */
+  font-family: Arial, sans-serif;
+}

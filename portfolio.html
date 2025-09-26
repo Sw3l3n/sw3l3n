@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="portfolio-title">Portfolio - Mis Trabajos</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background-color: #222;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav .nav-left a:last-child {
+      margin-right: 0;
+    }
+    #lang-switcher {
+      padding: 6px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="index.html" data-key="nav-home">Inicio</a>
+      <a href="portfolio.html" data-key="nav-portfolio">Portfolio</a>
+      <a href="contacto.html" data-key="nav-contact">Contacto</a>
+    </div>
+
+    <div class="nav-right">
+      <label for="lang-switcher" style="margin-right:8px;">🌍</label>
+      <select id="lang-switcher">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 data-key="portfolio-title">Portfolio</h1>
+    <p data-key="portfolio-subtitle">Aquí están mis juegos y proyectos destacados:</p>
+
+    <h2 data-key="portfolio-games">🎮 Juegos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Próximamente...</h3>
+        <p data-key="portfolio-games-text">Actualmente no tengo ningún juego publicado, próximamente añadiré mis creaciones aquí.</p>
+      </div>
+    </div>
+
+    <h2 data-key="portfolio-projects">💡 Proyectos</h2>
+    <div class="cards">
+      <div class="card">
+        <h3 data-key="casino-nightmare">The Casino Nightmare</h3>
+        <p data-key="casino-nightmare-desc">Un proyecto de videojuego con temática oscura, ambientado en un casino lleno de misterio y pesadillas.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>

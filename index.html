@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="index-title">Inicio - Mi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Barra de navegación */
+    nav {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background-color: #222;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav .nav-left a:last-child {
+      margin-right: 0;
+    }
+    #lang-switcher {
+      padding: 6px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+  <div class="nav-left">
+    <a href="index.html" data-key="nav-home">Inicio</a>
+    <a href="portfolio.html" data-key="nav-portfolio">Portfolio</a>
+    <a href="contacto.html" data-key="nav-contact">Contacto</a>
+  </div>
+
+  <div class="nav-right">
+    <label for="lang-switcher" style="margin-right:8px;">🌍</label>
+    <select id="lang-switcher">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇬🇧 English</option>
+    </select>
+  </div>
+</nav>
+
+
+  <div class="container">
+    <h1 data-key="index-title">Bienvenido a mi página</h1>
+    <p data-key="index-text">Soy desarrollador y aquí muestro mis proyectos y juegos.</p>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>

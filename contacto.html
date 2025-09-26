@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-key="contact-title">Contacto - Mi Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    nav {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background-color: #222;
+      padding: 10px 20px;
+    }
+    nav a {
+      color: white;
+      margin-right: 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav .nav-left a:last-child {
+      margin-right: 0;
+    }
+    #lang-switcher {
+      padding: 6px;
+      border-radius: 6px;
+      border: none;
+      font-size: 14px;
+      background: #fff;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <div class="nav-left">
+      <a href="index.html" data-key="nav-home">Inicio</a>
+      <a href="portfolio.html" data-key="nav-portfolio">Portfolio</a>
+      <a href="contacto.html" data-key="nav-contact">Contacto</a>
+    </div>
+
+    <div class="nav-right">
+      <label for="lang-switcher" style="margin-right:8px;">🌍</label>
+      <select id="lang-switcher">
+        <option value="es">🇪🇸 Español</option>
+        <option value="en">🇬🇧 English</option>
+      </select>
+    </div>
+  </nav>
+
+  <div class="container">
+    <h1 data-key="contact-title">Contáctame</h1>
+    <p data-key="contact-text">Puedes contactar conmigo para cualquier cosa en el correo:</p>
+    <p><strong>swelen47@gmail.com</strong></p>
+  </div>
+
+  <script src="lang.js"></script>
+</body>
+</html>
