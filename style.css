@@ -36,5 +36,5 @@ nav .nav-left a:last-child {
 body {
   margin: 0;
   padding-top: 60px; /* altura de la barra */
-  font-family: Arial, sans-serif;
+  font-family: 'Barlow', Arial, sans-serif;
 }
