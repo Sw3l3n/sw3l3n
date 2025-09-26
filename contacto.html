@@ -5,33 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title data-key="contact-title">Contacto - Mi Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <style>
-    nav {
-      display: flex;
-      justify-content: space-between; 
-      align-items: center;
-      background-color: #222;
-      padding: 10px 20px;
-    }
-    nav a {
-      color: white;
-      margin-right: 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-    nav .nav-left a:last-child {
-      margin-right: 0;
-    }
-    #lang-switcher {
-      padding: 6px;
-      border-radius: 6px;
-      border: none;
-      font-size: 14px;
-      background: #fff;
-      color: #000;
-      cursor: pointer;
-    }
-  </style>
 </head>
 <body>
 
@@ -51,12 +24,15 @@
     </div>
   </nav>
 
-  <div class="container">
-    <h1 data-key="contact-title">Contáctame</h1>
-    <p data-key="contact-text">Puedes contactar conmigo para cualquier cosa en el correo:</p>
-    <p><strong>swelen47@gmail.com</strong></p>
+  <div class="container" style="display:flex; justify-content:center; align-items:center; min-height:60vh;">
+    <div style="background:#181818; border-radius:12px; box-shadow:0 2px 8px #0008; padding:40px 32px; max-width:400px; width:100%; display:flex; flex-direction:column; align-items:center;">
+      <h1 data-key="contact-title" style="color:#00fff7; font-family:'Orbitron',Arial,sans-serif; font-size:2rem; margin-bottom:16px; text-align:center;">Contáctame</h1>
+      <p data-key="contact-text" style="color:#fff; text-align:center; font-size:1.1rem;">Puedes contactar conmigo para cualquier cosa en el correo:</p>
+      <p style="color:#FFD600; font-size:1.2rem; font-family:'Orbitron',Arial,sans-serif; margin-top:12px;"> <strong>swelen47@gmail.com</strong></p>
+    </div>
   </div>
 
   <script src="lang.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
