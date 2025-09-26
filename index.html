@@ -10,27 +10,32 @@
 <body>
   <!-- Navbar -->
   <nav>
-    <div class="nav-left">
-      <a href="index.html" data-key="nav-home">Inicio</a>
-      <div class="dropdown">
-        <a href="#" data-key="nav-portfolio">Portfolio ▾</a>
-        <div class="dropdown-content">
-          <a href="juegos.html" data-key="nav-games">🎮 Juegos</a>
-          <a href="proyectos.html" data-key="nav-projects">💡 Proyectos</a>
-        </div>
+  <div class="nav-left">
+    <a href="index.html" data-key="nav-home">Inicio</a>
+
+    <!-- Dropdown Portfolio -->
+    <div class="dropdown">
+      <a href="#" class="dropbtn" data-key="nav-portfolio">Portfolio ▾</a>
+      <div class="dropdown-content">
+        <a href="juegos.html" data-key="nav-games">🎮 Juegos</a>
+        <a href="proyectos.html" data-key="nav-projects">💡 Proyectos</a>
       </div>
-      <a href="contacto.html" data-key="nav-contact">Contacto</a>
-      <a href="donar.html" data-key="nav-donate">Donar</a>
-      <a href="sobre.html" data-key="nav-about">Sobre mí</a>
     </div>
-    <div class="nav-right">
-      <label for="lang-switcher">🌍</label>
-      <select id="lang-switcher">
-        <option value="es">🇪🇸 Español</option>
-        <option value="en">🇬🇧 English</option>
-      </select>
-    </div>
-  </nav>
+
+    <a href="contacto.html" data-key="nav-contact">Contacto</a>
+    <a href="donar.html" data-key="nav-donate">Donar</a>
+    <a href="sobre.html" data-key="nav-about">Sobre mí</a>
+  </div>
+
+  <div class="nav-right">
+    <label for="lang-switcher">🌍</label>
+    <select id="lang-switcher">
+      <option value="es">🇪🇸 Español</option>
+      <option value="en">🇬🇧 English</option>
+    </select>
+  </div>
+</nav>
+
 
   <div class="container">
     <h1 data-key="home-title">Bienvenido a mi web</h1>
